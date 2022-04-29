@@ -3,16 +3,15 @@ package domain;
 import java.util.Objects;
 
 public class Contact {
+    private Long Id;
     private Integer phoneNumber;
     private String firstName;
-    private Long Id;
     private String lastName;
     private String residence;
 
-    public Contact(Integer phoneNumber, String firstName, Long id, String lastName, String residence) {
+    public Contact(Integer phoneNumber, String firstName, String lastName, String residence) {
         this.phoneNumber = phoneNumber;
         this.firstName = firstName;
-        Id = id;
         this.lastName = lastName;
         this.residence = residence;
     }
@@ -28,5 +27,16 @@ public class Contact {
     @Override
     public int hashCode() {
         return Objects.hash(Id);
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "phoneNumber=" + phoneNumber +
+                ", firstName='" + firstName + '\'' +
+                ", Id=" + Id +
+                ", lastName='" + lastName + '\'' +
+                ", residence='" + residence + '\'' +
+                '}';
     }
 }
