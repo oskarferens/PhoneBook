@@ -1,12 +1,12 @@
 package controller;
 
-import controller.repository.PhoneBookDbImpl;
+import repository.PhoneBookDbImpl;
 import domain.Contact;
 import service.ContactService;
 import java.util.Scanner;
 
 public class ContactController {
-    private ContactService service; //service to referencja
+    private ContactService service;
     private PhoneBookDbImpl db;
     private Scanner scanner;
 
@@ -23,7 +23,6 @@ public class ContactController {
             System.out.println("Wybierz opcje do wyboru");
             scanner = new Scanner(System.in);
             System.out.println("1 - dodaj kontakt");
-            //int chooseNumber = scanner.nextInt();
             System.out.println("wpisz imie");
             String name = scanner.nextLine();
             System.out.println("wpisz nazwisko");

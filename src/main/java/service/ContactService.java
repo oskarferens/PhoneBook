@@ -1,6 +1,6 @@
 package service;
 
-import controller.repository.PhoneBookDbImpl;
+import repository.PhoneBookDbImpl;
 import domain.Contact;
 
 import java.util.Optional;
