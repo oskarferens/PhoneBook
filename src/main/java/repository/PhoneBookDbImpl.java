@@ -28,5 +28,9 @@ public class PhoneBookDbImpl implements PhoneBookDb{
     public List<Contact> findAll() {
         return null;
     }
+    @Override
+    public void create(Contact contact) {
+
+    }
 
 }

@@ -15,6 +15,9 @@ public class ContactService {
     public void saveContact (Contact contact) {
         db.save(contact);
     }
+    public void createContact (Contact contact) {
+        db.create(contact);
+    }
 
     public Optional<Contact> findById(Long Id) {
         return db.findById(Id);
