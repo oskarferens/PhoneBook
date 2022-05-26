@@ -21,12 +21,15 @@ public class ContactController {
         boolean working = true;
         db = new PhoneBookDbImpl();
         service = new ContactService(db,scanner);
-        int option = 0;
+        int option;
         scanner = new Scanner(System.in);
 
         while(working) {
             showWelcomeMessage(welcomeMessage);
             showAddContactMessage(addContactMessage);
+            /*
+            Dodaj metody wyswietlajace poszczegolne opcje
+             */
             option = scanner.nextInt();
             switch (option) {
                 case 1: service.saveContact();
@@ -54,22 +57,3 @@ public class ContactController {
     }
 }
 
-/*while(working) {
-        System.out.println("Wybierz opcje do wyboru");
-        scanner = new Scanner(System.in);
-        System.out.println("1 - dodaj kontakt");
-        System.out.println("wpisz imie");
-        String name = scanner.nextLine();
-        System.out.println("wpisz nazwisko");
-        String lastName = scanner.nextLine();
-        System.out.println("wpisz miejsce zamieszkania");
-        String residence = scanner.nextLine();
-        System.out.println("wpisz numer telefonu");
-        Integer phoneNumber = scanner.nextInt();
-        Contact contact = new Contact(phoneNumber,name,lastName,residence);
-        service.saveContact(contact);
-        Contact contact1 = service.findById(1L).get();
-        System.out.println(contact1);
-        service.deleteContact(1L);
-        System.out.println(db.findAll());
-        }*/

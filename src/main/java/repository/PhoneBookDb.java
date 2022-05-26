@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface PhoneBookDb {
 
-    void save(Contact contact);
+    Long save(Contact contact);
 
     void deleteContact(Long Id);
 

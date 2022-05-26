@@ -9,12 +9,13 @@ import java.util.*;
     private final Map<Long, Contact> contactDb = new HashMap<>();
     private long counter = 0;
 
-    public void save(Contact contact) {
+    public Long save(Contact contact) {
         if (contactDb.containsValue(counter)) {
             contactDb.put(counter++,contact);
         } else {
             contactDb.put(counter,contact);
         }
+        return counter;
     }
 
     @Override
@@ -27,7 +28,7 @@ import java.util.*;
 
     @Override
     public Optional<Contact> findById(Long Id) {
-        return Optional.of(contactDb.get(Id));
+        return Optional.ofNullable(contactDb.get(Id));
     }
 
     @Override
