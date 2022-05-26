@@ -1,22 +1,28 @@
  package repository;
 
 import domain.Contact;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 
-public class PhoneBookDbImpl implements PhoneBookDb{
+import java.util.*;
+
+ public class PhoneBookDbImpl implements PhoneBookDb{
 
     private final Map<Long, Contact> contactDb = new HashMap<>();
+    private long counter = 0;
 
     public void save(Contact contact) {
-        contactDb.put(1L, contact);
+        if (contactDb.containsValue(counter)) {
+            contactDb.put(counter++,contact);
+        } else {
+            contactDb.put(counter,contact);
+        }
     }
 
     @Override
     public void deleteContact(Long Id) {
-        contactDb.get(Id);
+        Contact contact = contactDb.get(Id);
+        if (contact != null) {
+            contactDb.remove(Id);
+        }
     }
 
     @Override
@@ -26,11 +32,6 @@ public class PhoneBookDbImpl implements PhoneBookDb{
 
     @Override
     public List<Contact> findAll() {
-        return null;
+        return new ArrayList<>(contactDb.values());
     }
-    @Override
-    public void create(Contact contact) {
-
-    }
-
 }

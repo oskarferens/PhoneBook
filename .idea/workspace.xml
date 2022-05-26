@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe6067cb-8132-428b-82ea-6a189ec43c20" name="Changes" comment="creating methods for stuff in Controller" />
+    <list default="true" id="fe6067cb-8132-428b-82ea-6a189ec43c20" name="Changes" comment="gitIgnore fixed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dictionary/ContactDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PhoneBookDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneBookDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PhoneBookDbImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneBookDbImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/ContactServiceTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ContactServiceTestSuite.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +58,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -118,12 +127,12 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/oskar/IdeaProjects/PhoneBookDirectory&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/oskar/IdeaProjects/JavaClass&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.PhoneBookDirectory [build]">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="PhoneBookDirectory.main" />
@@ -183,7 +192,11 @@
       <workItem from="1652002440575" duration="1086000" />
       <workItem from="1652549711332" duration="1074000" />
       <workItem from="1652551507590" duration="84000" />
-      <workItem from="1652864677134" duration="6588000" />
+      <workItem from="1652864677134" duration="16064000" />
+      <workItem from="1653206306031" duration="609000" />
+      <workItem from="1653239392527" duration="912000" />
+      <workItem from="1653412152419" duration="3255000" />
+      <workItem from="1653580911926" duration="5679000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit. Project starts.">
       <created>1650748639925</created>
@@ -241,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652901658169</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="gitIgnore fixed">
+      <created>1652904976876</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652904976876</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +296,7 @@
     <MESSAGE value="Methods delete and findAll works. All ready." />
     <MESSAGE value="Deleted idea,build. Added .gradle to .gitignore" />
     <MESSAGE value="creating methods for stuff in Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating methods for stuff in Controller" />
+    <MESSAGE value="gitIgnore fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitIgnore fixed" />
   </component>
 </project>

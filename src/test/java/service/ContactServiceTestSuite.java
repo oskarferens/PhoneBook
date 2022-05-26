@@ -6,7 +6,6 @@ public class ContactServiceTestSuite {
     @Test
     void saveContact() {
         //Given
-
         //When
         //Then
     }

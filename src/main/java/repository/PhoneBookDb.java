@@ -15,5 +15,4 @@ public interface PhoneBookDb {
 
     List<Contact> findAll();
 
-    void create(Contact contact);
 }
