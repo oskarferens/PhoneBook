@@ -4,8 +4,7 @@ import repository.PhoneBookDbImpl;
 import service.ContactService;
 import java.util.Scanner;
 
-import static Dictionary.ContactDictionary.addContactMessage;
-import static Dictionary.ContactDictionary.welcomeMessage;
+import static dictionary.ContactDictionary.welcomeMessage;
 
 public class ContactController {
 
@@ -26,10 +25,6 @@ public class ContactController {
 
         while(working) {
             showWelcomeMessage(welcomeMessage);
-            showAddContactMessage(addContactMessage);
-            /*
-            Dodaj metody wyswietlajace poszczegolne opcje
-             */
             option = scanner.nextInt();
             switch (option) {
                 case 1: service.saveContact();
@@ -50,10 +45,6 @@ public class ContactController {
     }
     private void showWelcomeMessage(final String welcomeMessage) {
         System.out.println(welcomeMessage);
-    }
-
-    private void showAddContactMessage(final String showAddContactMessage) {
-        System.out.println(showAddContactMessage);
     }
 }
 

@@ -40,4 +40,8 @@ public class Contact {
                 ", residence='" + residence + '\'' +
                 '}';
     }
+
+    public void setId(Long id) {
+        Id = id;
+    }
 }

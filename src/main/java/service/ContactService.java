@@ -25,14 +25,14 @@ public class ContactService {
         System.out.println("wprowadz numer telefonu");
         int phoneNumber = scanner.nextInt();
         System.out.println("wprowadz adres zamieszkania");
+        scanner.nextLine();
         String residence = scanner.nextLine();
+
         Contact contact = new Contact(phoneNumber,name,lastname,residence);
         Long id = db.save(contact);
+        contact.setId(id);
+
         System.out.println("Saved contact " + contact + " pod id " + id);
-        /*
-        Po save kontakt ma id null, napraw :)
-        Po save kontakt nadpisuje poprzednie id zamiast wrzucić do kolejnego, napraw :)
-         */
     }
 
     public void findById() {
@@ -47,18 +47,13 @@ public class ContactService {
         System.out.println("Wpisz numer Id do usuniecia");
         long IdToDelete = scanner.nextLong();
         db.deleteContact(IdToDelete);
-        /*
-        Zwrocic informacje na konsole "Usunieto kontakt o ID : 20"
-         */
+        System.out.println("Kontakt o Id: " + IdToDelete + " zostal usuniety");
     }
 
     public void findAll() {
-        System.out.println(db.findAll());
-        /*
-        Zwrocic wszystkie kontakty + rozmiar tabelii kontaktow
-        Wszystkie kontakty (20):
-        -cont 1
-        -cont 2
-         */
+        List<Contact> all = db.findAll();
+        for (Contact contact : all) {
+            System.out.println(contact);
+        }
     }
 }

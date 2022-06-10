@@ -14,5 +14,4 @@ public interface PhoneBookDb {
     Optional<Contact> findById(Long Id);
 
     List<Contact> findAll();
-
 }

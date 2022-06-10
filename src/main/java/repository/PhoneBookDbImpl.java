@@ -9,20 +9,22 @@ import java.util.*;
     private final Map<Long, Contact> contactDb = new HashMap<>();
     private long counter = 0;
 
-    public Long save(Contact contact) {
-        if (contactDb.containsValue(counter)) {
-            contactDb.put(counter++,contact);
-        } else {
-            contactDb.put(counter,contact);
-        }
-        return counter;
-    }
+     public Long save(Contact contact) {
+         if (contactDb.containsKey(counter)) {
+             contactDb.put(++counter,contact);
+         } else {
+             contactDb.put(counter,contact);
+         }
+         return counter;
+     }
 
     @Override
     public void deleteContact(Long Id) {
         Contact contact = contactDb.get(Id);
         if (contact != null) {
             contactDb.remove(Id);
+        } else {
+            System.out.println(" Id doesn't exist ");
         }
     }
 
