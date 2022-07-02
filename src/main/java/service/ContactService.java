@@ -3,9 +3,15 @@ package service;
 import repository.PhoneBookDbImpl;
 import domain.Contact;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.stream.Stream;
+
+import static java.nio.file.Files.lines;
 
 public class ContactService {
 
@@ -56,4 +62,26 @@ public class ContactService {
             System.out.println(contact);
         }
     }
+
+    private void splitAndSave(String line) {
+        String[] split = line.split(",");
+        String s = split[0];
+        int i = Integer.parseInt(s);
+        Contact contact = new Contact(i,split[1],split[2],split[3]);
+        Long id = db.save(contact);
+        contact.setId(id);
+    }
+
+    public void importContacts() {
+        Scanner scanner = new Scanner(System.in);
+        Path pathToFile = Path.of("C:\\Users\\oskar\\IdeaProjects\\PhoneBookDirectory\\src\\main\\resources\\PhoneDbServiceContactFile.txt");
+        System.out.println(pathToFile.getFileName());
+
+        try (Stream<String> stream = lines(pathToFile)){
+            stream.filter(a -> !a.isEmpty()).forEach(a -> splitAndSave(a));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

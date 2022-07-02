@@ -1,6 +1,6 @@
 package controller;
 
-import exception.InputMismatchException;
+import java.util.InputMismatchException;
 import repository.PhoneBookDbImpl;
 import service.ContactService;
 import java.util.Scanner;
@@ -23,11 +23,17 @@ public class ContactController {
         service = new ContactService(db,scanner);
         int option;
         scanner = new Scanner(System.in);
-
         while(working) {
             showWelcomeMessage(welcomeMessage);
 
+
+
             try {
+
+                while (!scanner.hasNextInt()) {
+                    System.out.println("Input is not a number");
+                    scanner.nextLine();
+                }
                 option = scanner.nextInt();
                 switch (option) {
                     case 1:
@@ -42,6 +48,9 @@ public class ContactController {
                     case 4:
                         service.findById();
                         break;
+                    case 5:
+                        service.importContacts();
+                        break;
 
                     default:
                         working = false;
@@ -50,7 +59,7 @@ public class ContactController {
                 }
             }
             catch (InputMismatchException e) {
-                System.out.println("not a number");
+
             }
         }
     }
